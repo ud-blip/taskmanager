@@ -21,6 +21,8 @@ public class ConsoleUI {
                 case "1" -> addTask();
                 case "2" -> service.printAll();
                 case "3" -> filterByPriority();
+                case "4" -> service.saveToFile();
+                case "5" -> service.loadFromFile();
                 case "0" -> running = false;
                 default -> System.out.println("Неверный ввод. Попробуйте снова.");
             }
@@ -32,6 +34,8 @@ public class ConsoleUI {
         System.out.println("1. Добавить задачу");
         System.out.println("2. Показать все задачи");
         System.out.println("3. Фильтровать по приоритету");
+        System.out.println("4. Сохранить задачи");
+        System.out.println("5. Загрузить задачи");
         System.out.println("0. Выход");
         System.out.print("Ваш выбор: ");
     }
