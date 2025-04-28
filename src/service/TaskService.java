@@ -2,12 +2,15 @@ package service;
 
 import model.Priority;
 import model.Task;
+import storage.FileStorage;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TaskService {
     private final List<Task> tasks = new ArrayList<>();
+
+    private final FileStorage storage = new FileStorage();
 
     public void addTask(Task task) {
         tasks.add(task);
@@ -33,5 +36,13 @@ public class TaskService {
         if (!found) {
             System.out.println("Нет задач с таким приоритетом.");
         }
+    }
+
+    public void saveToFile() {
+        storage.save(tasks);
+    }
+
+    public void loadFromFile() {
+        storage.load(tasks);
     }
 }
