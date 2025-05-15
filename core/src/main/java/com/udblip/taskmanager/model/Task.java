@@ -1,4 +1,4 @@
-package model;
+package com.udblip.taskmanager.model;
 
 import java.time.LocalDate;
 

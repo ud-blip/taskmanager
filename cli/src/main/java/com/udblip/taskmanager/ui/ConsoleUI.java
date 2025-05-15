@@ -1,8 +1,9 @@
-package ui;
+package com.udblip.taskmanager.ui;
 
-import model.Priority;
-import model.Task;
-import service.TaskService;
+
+import com.udblip.taskmanager.model.Priority;
+import com.udblip.taskmanager.model.Task;
+import com.udblip.taskmanager.service.TaskService;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
