@@ -1,4 +1,4 @@
-import ui.ConsoleUI;
+package com.udblip.taskmanager;
 
 
 //Котов Д.В., 14 группа
@@ -8,6 +8,8 @@ import ui.ConsoleUI;
 // 2. Просматривать список всех задач
 // 3. Фильтровать задачи по приоритету
 
+
+import com.udblip.taskmanager.ui.ConsoleUI;
 
 public class Main {
     public static void main(String[] args) {
