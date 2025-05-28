@@ -4,13 +4,15 @@ package com.udblip.taskmanager.ui;
 import com.udblip.taskmanager.model.Priority;
 import com.udblip.taskmanager.model.Task;
 import com.udblip.taskmanager.service.TaskService;
+import com.udblip.taskmanager.storage.FileStorage;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class ConsoleUI {
-    private final TaskService service = new TaskService();
+    FileStorage storage = new FileStorage("tasks.txt");
+    private final TaskService service = new TaskService(storage);
     private final Scanner scanner = new Scanner(System.in);
 
     public void start() {
