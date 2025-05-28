@@ -30,4 +30,13 @@ public class Task {
     public String toString() {
         return String.format("Задача: %s | Приоритет: %s | Дедлайн: %s", title, priority, deadline);
     }
+
+    public LocalDate getDeadline() {
+        return deadline;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
 }
