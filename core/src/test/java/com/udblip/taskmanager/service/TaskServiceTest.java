@@ -79,6 +79,15 @@ class TaskServiceTest {
         assertTrue(results.isEmpty());
     }
 
+    @Test
+    void testFilterByDateNoMatchesReturnsEmpty2() {
+        LocalDate from = LocalDate.of(2025, 1, 1);
+        LocalDate to = LocalDate.of(2025, 12, 31);
+        List<Task> results = taskService.filterByDate(from, to);
+        assertTrue(!(results.isEmpty()));
+    }
+
+
 }
 
 

@@ -72,7 +72,8 @@ public class TaskService {
 
     public List<Task> filterByDate(LocalDate from, LocalDate to) {
         return tasks.stream()
-                .filter(t -> !t.getDeadline().isBefore(from) && !t.getDeadline().isAfter(to))
+                .filter(t -> !t.getDeadline().isBefore(from)
+                        && !t.getDeadline().isAfter(to))
                 .collect(Collectors.toList());
     }
 
